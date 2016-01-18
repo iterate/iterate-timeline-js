@@ -49,7 +49,13 @@ gulp.task('browserify-test', ['lint-test'], function() {
     .pipe(gulp.dest('build'))
 });
 
+
+gulp.task('test', ['lint-test', 'browserify-test'], function() {
+  return gulp.src('test/client/index.html')
+    .pipe(mochaPhantomjs());
+});
+
 gulp.task('watch', function() {
   gulp.watch('client/**/*.js', ['browserify-client']);
-  gulp.watch('test/client/**/*.js', ['browserify-tets']);
+  gulp.watch('test/client/**/*.js', ['test']);
 });
