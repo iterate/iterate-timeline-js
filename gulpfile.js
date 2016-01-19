@@ -23,7 +23,6 @@ gulp.task('lint-client', function() {
                                 .pipe(jshint.reporter('default'));
 });
 
-
 gulp.task('lint-test', function() {
   return gulp.src('./test/**/*.js')
                                 .pipe(jshint())
@@ -49,13 +48,39 @@ gulp.task('browserify-test', ['lint-test'], function() {
     .pipe(gulp.dest('build'))
 });
 
-
 gulp.task('test', ['lint-test', 'browserify-test'], function() {
   return gulp.src('test/client/index.html')
     .pipe(mochaPhantomjs());
+});
+
+gulp.task('styles', function() {
+  return gulp.src('client/less/index.less')
+    .pipe(less())
+    .pipe(prefix({ cascade: true }))
+    .pipe(rename('iterate-timeline.css'))
+    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('public/stylesheets'));
+});
+
+gulp.task('minify', ['styles'], function() {
+  return gulp.src('build/iterate-timeline.css')
+    .pipe(minifyCSS())
+    .pipe(rename('iterate-timeline.min.css'))
+    .pipe(gulp.dest('public/stylesheets'));
+});
+
+gulp.task('uglify', ['browserify-client'], function() {
+  return gulp.src('build/iterate-timeline.js')
+    .pipe(uglify())
+    .pipe(rename('iterate-timeline.min.js'))
+    .pipe(gulp.dest('public/javascripts'));
 });
 
 gulp.task('watch', function() {
   gulp.watch('client/**/*.js', ['browserify-client']);
   gulp.watch('test/client/**/*.js', ['test']);
 });
+
+gulp.task('build', ['uglify', 'minify']);
+
+gulp.task('default', ['test', 'build', 'watch']);
