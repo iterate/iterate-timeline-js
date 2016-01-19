@@ -17,6 +17,9 @@ var jshint = require('gulp-jshint');
 // Test Dependencies
 var mochaPhantomjs = require('gulp-mocha-phantomjs');
 
+// development server
+var connect = require('gulp-connect');
+
 gulp.task('lint-client', function() {
   return gulp.src('./client/**/*.js')
                                 .pipe(jshint())
@@ -76,6 +79,12 @@ gulp.task('uglify', ['browserify-client'], function() {
     .pipe(gulp.dest('public/javascripts'));
 });
 
+gulp.task('connect', function() {
+  connect.server({
+    root: 'public'
+  });
+});
+
 gulp.task('watch', function() {
   gulp.watch('client/**/*.js', ['browserify-client']);
   gulp.watch('test/client/**/*.js', ['test']);
@@ -83,4 +92,4 @@ gulp.task('watch', function() {
 
 gulp.task('build', ['uglify', 'minify']);
 
-gulp.task('default', ['test', 'build', 'watch']);
+gulp.task('default', ['test', 'build', 'connect', 'watch']);
