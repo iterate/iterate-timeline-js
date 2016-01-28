@@ -1,2 +1,7 @@
 node_modules
 .DS_Store
+public/stylesheets/iterate-timeline.min.css
+public/stylesheets/iterate-timeline.css
+public/javascripts/iterate-timeline.min.js
+public/javascripts/iterate-timeline.js
+build/
