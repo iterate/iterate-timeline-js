@@ -17,7 +17,6 @@ function displayEmployees(data) {
 }
 
 function isCurrentlyEmployed(employee) {
-  console.log(employee);
   if (employee.endDate === '') {
     return true;
   } else {
@@ -26,18 +25,19 @@ function isCurrentlyEmployed(employee) {
 }
 
 function currentEmployees(data) {
-  console.log('employees: ' + data);
   return data.filter(isCurrentlyEmployed);
 }
 
-$.getJSON('/data/employees.json', function(data) {
-  employees = data;
-}).done(function( json ) {
-  displayEmployees(currentEmployees(employees));
-  console.log( 'JSON Data: ' + json );
-}).fail(function( jqxhr, textStatus, error ) {
-  var err = textStatus + ', ' + error;
-  console.log( 'Request Failed: ' + err );
-});
+function initialize() {
+  $.getJSON('/data/employees.json', function(data) {
+    employees = data;
+  }).done(function( json ) {
+    displayEmployees(currentEmployees(employees));
+    console.log( 'JSON Data: ' + json );
+  }).fail(function( jqxhr, textStatus, error ) {
+    var err = textStatus + ', ' + error;
+    console.log( 'Request Failed: ' + err );
+  });
+}
 
-
+module.exports.currentEmployees = currentEmployees;
