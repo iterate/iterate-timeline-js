@@ -28,6 +28,24 @@ function currentEmployees(data) {
   return data.filter(isCurrentlyEmployed);
 }
 
+function isEmployedOn(date) {
+  return function(employee) {
+    var startDate = new Date(employee.startDate);
+    var endDate = new Date(employee.endDate);
+    var started = startDate.getTime() <= date.getTime();
+    var stillEmployed = (employee.endDate === '' || endDate.getTime() > date.getTime());
+    if (started && stillEmployed) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+}
+
+function employeesOnDate(data, date) {
+  return data.filter(isEmployedOn(date));
+}
+
 function initialize() {
   $.getJSON('/data/employees.json', function(data) {
     employees = data;
@@ -41,3 +59,7 @@ function initialize() {
 }
 
 module.exports.currentEmployees = currentEmployees;
+module.exports.employeesOnDate = employeesOnDate;
+module.exports.isEmployedOn = isEmployedOn;
+
+
