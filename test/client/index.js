@@ -31,26 +31,3 @@ describe('new test', function() {
   });
 });
 
-describe('employee', function() {
-  var employee = {
-    'name': 'Morten',
-    'startDate': '2007-09-01',
-    'endDate': '',
-    'image': 'images/morten.jpeg'
-  };
-  it('should be employed on date', function() {
-    var result = app.isEmployedOn(new Date('2015-01-01'))(employee);
-
-    expect(result).to.equal(true);
-  });
-  it('should not be employed before start date', function() {
-    var result = app.isEmployedOn(new Date('2006-01-01'))(employee);
-
-    expect(result).to.equal(false);
-  });
-  it('should be employed at start date', function() {
-    var result = app.isEmployedOn(new Date('2007-09-01'))(employee);
-
-    expect(result).to.equal(true);
-  });
-});
