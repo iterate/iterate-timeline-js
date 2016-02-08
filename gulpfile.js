@@ -5,6 +5,9 @@ var rename = require('gulp-rename');
 // Build Dependencies
 var browserify = require('gulp-browserify');
 var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
+var babel = require('gulp-babel');
+var sourcemaps = require('gulp-sourcemaps');
 
 // Style Dependencies
 var less = require('gulp-less');
@@ -32,10 +35,22 @@ gulp.task('lint-test', function() {
                                 .pipe(jshint.reporter('default'));
 });
 
-gulp.task('browserify-client', ['lint-client'], function() {
-  return gulp.src('client/index.js')
+gulp.task('scripts', ['lint-client'], function() {
+  return gulp.src('client/*.js')
+    .pipe(sourcemaps.init())
+    .pipe(babel({
+      presets: ['es2015']
+    }))
+    .pipe(concat('all.js'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('build'));
+});
+
+gulp.task('browserify-client', ['scripts'], function() {
+  return gulp.src('build/all.js')
     .pipe(browserify({
       insertGlobals: true
+     // ,transform: ['babelify']
     }))
     .pipe(rename('iterate-timeline.js'))
     .pipe(gulp.dest('build'))
@@ -46,6 +61,7 @@ gulp.task('browserify-test', ['lint-test'], function() {
   return gulp.src('test/client/index.js')
     .pipe(browserify({
       insertGlobals: true
+      //, transform: ['babelify']
     }))
     .pipe(rename('client-test.js'))
     .pipe(gulp.dest('build'))
