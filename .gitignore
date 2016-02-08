@@ -5,3 +5,4 @@ public/stylesheets/iterate-timeline.css
 public/javascripts/iterate-timeline.min.js
 public/javascripts/iterate-timeline.js
 build/
+*.swp
