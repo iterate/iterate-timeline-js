@@ -24,8 +24,8 @@ describe('new test', function() {
   });
 
   it('should filter out employees on date', function() {
-    var date_20150901 = new Date(2015, 9, 1);
-    var result = app.employeesOnDate(employees, date_20150901);
+    var date20150901 = new Date(2015, 9, 1);
+    var result = app.employeesOnDate(employees, date20150901);
 
     expect(result).to.have.length(2);
   });
