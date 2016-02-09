@@ -23,7 +23,26 @@ const employee = (employeeJson) => {
   };
 };
 
-var employees = {};
+let employees = {};
+
+function createMonthMap(fromDate, toDate) {
+  console.log(fromDate, toDate);
+  let result = new Map();
+  let currentDate = fromDate;
+  let i = 1;
+  while (currentDate < toDate) {
+    result.set(i++, currentDate);
+    let currentMonth = currentDate.getMonth();
+    let currentYear = currentDate.getYear();
+    let newMonth = currentMonth === 11 ? 0 : currentMonth + 1;
+    let newYear = currentMonth === 11 ? currentYear + 1 : currentYear;
+    currentDate = new Date(1900 + newYear, newMonth);
+  }
+ 
+  return result;
+}
+
+let months = createMonthMap(new Date(2007,2), new Date(2016,1));
 
 function displayEmployees(data) {
   var items = [];
@@ -35,6 +54,10 @@ function displayEmployees(data) {
     html: items.join('')
   });
   $('.employees-list').replaceWith(employeesList);
+}
+
+function displayMonth(month) {
+  $('#rangemonth').text(month.toDateString());
 }
 
 function currentEmployees(data) {
@@ -61,10 +84,11 @@ function initialize() {
 
 initialize();
 
-$('#datepicker').change(function() {
-  let date = $(this).val();
-  let dateObject = new Date(date);
-  displayEmployees(employeesOnDate(employees, dateObject));
+$('#rangepicker').change(function() {
+  let chosenValue= $(this).val();
+  let chosenMonth = months.get(parseInt(chosenValue));
+  displayMonth(chosenMonth);
+  displayEmployees(employeesOnDate(employees, chosenMonth));
 });
 
 module.exports.currentEmployees = currentEmployees;
