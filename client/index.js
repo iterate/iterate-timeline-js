@@ -8,7 +8,8 @@ const employee = (employeeJson) => {
   const startDate = new Date(employeeJson.startDate);
   const hasEndDate = employeeJson.endDate !== '';
   const endDate = new Date(employeeJson.endDate);
-  
+  const image = employeeJson.image;
+
   return {
     name: () => { return name; },
     startDate: () => { return startDate; },
@@ -19,7 +20,8 @@ const employee = (employeeJson) => {
       let stillEmployed = (!hasEndDate || endDate.getTime() > date.getTime());
 
       return started && stillEmployed;
-    }
+    },
+    image: () => { return image; }
   };
 };
 
@@ -38,7 +40,7 @@ function createMonthMap(fromDate, toDate) {
     let newYear = currentMonth === 11 ? currentYear + 1 : currentYear;
     currentDate = new Date(1900 + newYear, newMonth);
   }
- 
+
   return result;
 }
 
@@ -46,14 +48,21 @@ let months = createMonthMap(new Date(2007,2), new Date(2016,1));
 
 function displayEmployees(data) {
   var items = [];
+  let images = [];
   data.forEach(function(employee) {
     items.push('<li>' + employee.name() + '</li>');
+    images.push('<img src="/' + employee.image() + '" alt="' + employee.name() + '" width="100px">');
   });
   var employeesList = $('<ul/>', {
     'class': 'employees-list',
     html: items.join('')
   });
   $('.employees-list').replaceWith(employeesList);
+  let employeeImages = $('<div/>', {
+    'id': 'employee-images',
+    html: images.join('')
+  });
+  $('#employee-images').replaceWith(employeeImages);
 }
 
 function displayMonth(month) {
