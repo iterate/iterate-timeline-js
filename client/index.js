@@ -100,6 +100,8 @@ $('#rangepicker').change(function() {
   displayEmployees(employeesOnDate(employees, chosenMonth));
 });
 
+$('#rangepicker').attr('max', months.size);
+
 module.exports.currentEmployees = currentEmployees;
 module.exports.employeesOnDate = employeesOnDate;
 
