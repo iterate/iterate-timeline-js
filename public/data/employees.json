@@ -61,19 +61,19 @@
     },
     {
         "endDate": "2012-08-01",
-        "image": "images/torvald.jpg",
+        "image": "images/du.jpg",
         "name": "Torvald",
         "startDate": "2007-12-01"
     },
     {
         "endDate": "2009-10-01",
-        "image": "images/dan.jpg",
+        "image": "images/du.jpg",
         "name": "Dan",
         "startDate": "2008-01-01"
     },
     {
         "endDate": "",
-        "image": "images/bartek.jpg",
+        "image": "images/du.jpg",
         "name": "Bartlomiej",
         "startDate": "2008-01-01"
     },
@@ -85,13 +85,13 @@
     },
     {
         "endDate": "2009-06-01",
-        "image": "images/jorgenlind.jpg",
+        "image": "images/du.jpg",
         "name": "J\u00f8rgen",
         "startDate": "2008-05-01"
     },
     {
         "endDate": "2011-01-01",
-        "image": "images/krisd.jpg",
+        "image": "images/du.jpg",
         "name": "Krzysztof D.",
         "startDate": "2008-05-01"
     },
@@ -103,13 +103,13 @@
     },
     {
         "endDate": "2009-03-01",
-        "image": "images/andre.jpg",
+        "image": "images/du.jpg",
         "name": "Andr\u00e9",
         "startDate": "2008-08-01"
     },
     {
         "endDate": "2011-12-01",
-        "image": "images/larsaune.jpg",
+        "image": "images/du.jpg",
         "name": "Lars A.",
         "startDate": "2008-08-01"
     },
@@ -121,13 +121,13 @@
     },
     {
         "endDate": "2011-12-01",
-        "image": "images/steinmagnus.jpg",
+        "image": "images/du.jpg",
         "name": "Stein Magnus",
         "startDate": "2009-02-01"
     },
     {
         "endDate": "2011-05-01",
-        "image": "images/jan.jpg",
+        "image": "images/du.jpg",
         "name": "Jan",
         "startDate": "2009-03-01"
     },
@@ -145,13 +145,13 @@
     },
     {
         "endDate": "2011-09-01",
-        "image": "images/johannes.jpg",
+        "image": "images/du.jpg",
         "name": "Johannes",
         "startDate": "2009-06-01"
     },
     {
         "endDate": "2010-10-01",
-        "image": "images/benedicte.jpg",
+        "image": "images/du.jpg",
         "name": "Benedikte",
         "startDate": "2009-08-01"
     },
@@ -163,7 +163,7 @@
     },
     {
         "endDate": "2011-01-01",
-        "image": "images/bjorn.jpg",
+        "image": "images/du.jpg",
         "name": "Bj\u00f8rn",
         "startDate": "2010-09-01"
     },
@@ -193,19 +193,19 @@
     },
     {
         "endDate": "2012-05-01",
-        "image": "images/aaron.jpg",
+        "image": "images/du.jpg",
         "name": "Aaron",
         "startDate": "2011-02-01"
     },
     {
         "endDate": "2013-01-01",
-        "image": "images/krisg.jpg",
+        "image": "images/du.jpg",
         "name": "Krzysztof G.",
         "startDate": "2011-04-01"
     },
     {
         "endDate": "2012-02-01",
-        "image": "images/ingrid.jpg",
+        "image": "images/du.jpg",
         "name": "Ingrid",
         "startDate": "2011-04-01"
     },
