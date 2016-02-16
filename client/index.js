@@ -1,6 +1,7 @@
 'use strict';
 
 var $ = require('jquery');
+// var fetch = require('whatwg-fetch');
 // var employee = require('employee');
 
 const employee = (employeeJson) => {
@@ -74,21 +75,25 @@ function currentEmployees(data) {
 }
 
 function employeesOnDate(data, date) {
-  return data.filter(function(employee) { 
-    return employee.isEmployedOn(date);  
+  return data.filter(function(employee) {
+    return employee.isEmployedOn(date);
   });
 }
 
 function initialize() {
-  $.getJSON('/data/employees.json', function(data) {
-    employees = data.map(employee);
-  }).done(function( json ) {
-    displayEmployees(currentEmployees(employees));
-    console.log( 'JSON Data: ' + json );
-  }).fail(function( jqxhr, textStatus, error ) {
-    var err = textStatus + ', ' + error;
-    console.log( 'Request Failed: ' + err );
-  });
+  fetch('/data/employees.json')
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      employees = json.map(employee);
+    })
+    .then(function() {
+      displayEmployees(currentEmployees(employees));
+    })
+    .catch(function(ex) {
+      console.log('Failed to fetch employees.', ex);
+    });
 }
 
 initialize();

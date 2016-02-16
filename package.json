@@ -42,5 +42,8 @@
   },
   "browserify-shim": {
     "jquery": "$"
+  },
+  "dependencies": {
+    "whatwg-fetch": "^0.11.0"
   }
 }
