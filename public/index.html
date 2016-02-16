@@ -12,8 +12,24 @@
     <h1>Iterate timeline</h1>
     <input id="rangepicker" type="range" min="1" step="1" value="1" name="month">
     <span id="rangemonth"></span>
-    
-    <div id="employee-images"> </div>
+
+    <div class="container">
+      <div class="item maincontent" id="employee-images"></div>
+      <div class="item aside"> 
+        <dl id="stats"></dl>
+        <script id="employee-statistics" type="text/x-handlebars-template">
+          <dl id="stats">
+            <dt># employees</dt>
+            <dd>{{numberOfEmployees}}</dd>
+            <dt>male / female ratio</dt>
+            <dd>{{ratio}}</dd>
+            <dt># alumni</dt>
+            <dd>{{alumni}}</dd>
+          </dl>
+        </script>
+      </div>
+
+    </div>
     <div id="timeline">
       <ul class="employees-list"></ul>
     </div>

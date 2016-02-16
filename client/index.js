@@ -1,8 +1,12 @@
 'use strict';
 
 var $ = require('jquery');
-// var fetch = require('whatwg-fetch');
+var foo = require('handlebars');
 // var employee = require('employee');
+
+let statsTemplateScript = $('#employee-statistics').html();
+let statsTemplate = foo.compile(statsTemplateScript);
+
 
 const employee = (employeeJson) => {
   const name = employeeJson.name;
@@ -61,6 +65,7 @@ function displayEmployees(data) {
   $('.employees-list').replaceWith(employeesList);
   let employeeImages = $('<div/>', {
     'id': 'employee-images',
+    'class': 'item maincontent',
     html: images.join('')
   });
   $('#employee-images').replaceWith(employeeImages);
@@ -68,6 +73,10 @@ function displayEmployees(data) {
 
 function displayMonth(month) {
   $('#rangemonth').text(month.toDateString());
+}
+
+function displayStats(data) {
+  $('#stats').replaceWith(statsTemplate({numberOfEmployees: data.length, ratio: 1, alumni: 1}));
 }
 
 function currentEmployees(data) {
@@ -103,6 +112,7 @@ $('#rangepicker').change(function() {
   let chosenMonth = months.get(parseInt(chosenValue));
   displayMonth(chosenMonth);
   displayEmployees(employeesOnDate(employees, chosenMonth));
+  displayStats(employeesOnDate(employees, chosenMonth));
 });
 
 $('#rangepicker').attr('max', months.size);
