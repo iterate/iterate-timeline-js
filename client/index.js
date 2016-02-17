@@ -55,6 +55,12 @@ function employeesOnDate(data, date) {
   });
 }
 
+function changeMonth(month) {
+  displayMonth(month);
+  displayEmployees(employeesOnDate(employees, month));
+  displayStats(employeesOnDate(employees, month));
+}
+
 function initialize() {
   fetch('/data/employees.json')
     .then(function(response) {
@@ -64,7 +70,7 @@ function initialize() {
       employees = json.map(employee);
     })
     .then(function() {
-      displayEmployees(currentEmployees(employees));
+      changeMonth(months.get(parseInt($('#rangepicker').val())));
     })
     .catch(function(ex) {
       console.log('Failed to fetch employees.', ex);
@@ -74,14 +80,13 @@ function initialize() {
 initialize();
 
 $('#rangepicker').change(function() {
-  let chosenValue= $(this).val();
-  let chosenMonth = months.get(parseInt(chosenValue));
-  displayMonth(chosenMonth);
-  displayEmployees(employeesOnDate(employees, chosenMonth));
-  displayStats(employeesOnDate(employees, chosenMonth));
+  let chosenMonth = months.get(parseInt($(this).val()));
+  changeMonth(chosenMonth);
 });
 
 $('#rangepicker').attr('max', months.size);
+$('#rangepicker').attr('value', months.size);
+
 
 module.exports.currentEmployees = currentEmployees;
 module.exports.employeesOnDate = employeesOnDate;
