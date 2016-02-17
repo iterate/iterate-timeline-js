@@ -1,6 +1,6 @@
 [
     {
-        "endDate": "",
+        "endDate": "2015-10-05",
         "image": "images/jorgensen.jpg",
         "name": "Simen",
         "startDate": "2007-03-01"
@@ -168,13 +168,13 @@
         "startDate": "2010-09-01"
     },
     {
-        "endDate": "",
+        "endDate": "2016-01-28",
         "image": "images/bang.jpg",
         "name": "Tom",
         "startDate": "2010-10-01"
     },
     {
-        "endDate": "",
+        "endDate": "2015-01-01",
         "image": "images/kent.jpg",
         "name": "Kent",
         "startDate": "2010-10-01"
@@ -186,7 +186,7 @@
         "startDate": "2010-11-01"
     },
     {
-        "endDate": "",
+        "endDate": "2015-05-12",
         "image": "images/jakub.jpg",
         "name": "Jakub",
         "startDate": "2011-01-01"
@@ -242,7 +242,7 @@
     {
         "endDate": "",
         "image": "images/barlindhaug.jpg",
-        "name": "Lars B.",
+        "name": "Lars Barlindhaug",
         "startDate": "2012-08-01"
     },
     {
@@ -264,7 +264,7 @@
         "startDate": "2013-01-01"
     },
     {
-        "endDate": "",
+        "endDate": "2016-01-29",
         "image": "images/andrew.jpg",
         "name": "Andrew",
         "startDate": "2013-04-01"
@@ -366,7 +366,7 @@
         "startDate": "2014-08-01"
     },
     {
-        "endDate": "",
+        "endDate": "2016-01-31",
         "image": "images/alex.jpg",
         "name": "Alexandra",
         "startDate": "2014-09-01"
@@ -376,5 +376,47 @@
         "image": "images/erik.jpg",
         "name": "Erik",
         "startDate": "2014-10-01"
+    },
+    {
+        "endDate": "",
+        "image": "images/charles.jpg",
+        "name": "Charles Michelson",
+        "startDate": "2015-01-01"
+    },
+    {
+        "endDate": "",
+        "image": "images/therese.jpg",
+        "name": "Therese Engen",
+        "startDate": "2015-04-01"
+    },
+    {
+        "endDate": "",
+        "image": "images/arne.jpg",
+        "name": "Arne Mæhlum",
+        "startDate": "2015-08-01"
+    },
+    {
+        "endDate": "",
+        "image": "images/karine.jpg",
+        "name": "Karine Gran Vifstad",
+        "startDate": "2015-08-01"
+    },
+    {
+        "endDate": "",
+        "image": "images/magnusl.jpg",
+        "name": "Magnus Lien",
+        "startDate": "2015-08-01"
+    },
+    {
+        "endDate": "",
+        "image": "images/sindre.jpg",
+        "name": "Sindre Johansen",
+        "startDate": "2015-08-01"
+    },
+    {
+        "endDate": "",
+        "image": "images/du.jpg",
+        "name": "Tor-Erik Steinsland",
+        "startDate": "2016-02-01"
     }
 ]
