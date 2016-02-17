@@ -5,6 +5,9 @@ var rename = require('gulp-rename');
 // Build Dependencies
 var browserify = require('gulp-browserify');
 var uglify = require('gulp-uglify');
+var hbsfy = require('hbsfy').configure({
+  extensions: ['html', 'hbs']
+});
 
 // Style Dependencies
 var less = require('gulp-less');
@@ -36,7 +39,7 @@ gulp.task('browserify-client', ['lint-client'], function() {
   return gulp.src('client/*.js')
     .pipe(browserify({
       insertGlobals: true,
-      transform: ['babelify']
+      transform: [hbsfy, 'babelify']
     }))
     .pipe(rename('iterate-timeline.js'))
     .pipe(gulp.dest('build'))

@@ -1,12 +1,9 @@
 'use strict';
 
 var $ = require('jquery');
-var foo = require('handlebars');
 // var employee = require('employee');
 
-let statsTemplateScript = $('#employee-statistics').html();
-let statsTemplate = foo.compile(statsTemplateScript);
-
+let statsTemplate = require('./template/stats.hbs');
 
 const employee = (employeeJson) => {
   const name = employeeJson.name;
