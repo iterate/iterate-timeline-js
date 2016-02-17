@@ -1,37 +1,14 @@
 'use strict';
 
 var $ = require('jquery');
-// var employee = require('employee');
+var employee = require('./employee').employee;
 
 let statsTemplate = require('./template/stats.hbs');
 let employeeImagesTemplate = require('./template/employee-images.hbs');
 
-const employee = (employeeJson) => {
-  const name = employeeJson.name;
-  const startDate = new Date(employeeJson.startDate);
-  const hasEndDate = employeeJson.endDate !== '';
-  const endDate = new Date(employeeJson.endDate);
-  const image = employeeJson.image;
-
-  return {
-    name: () => { return name; },
-    startDate: () => { return startDate; },
-    endDate: () => { return endDate; },
-    isCurrentlyEmployed: () => { return !hasEndDate; },
-    isEmployedOn: (date) => {
-      let started = startDate.getTime() <= date.getTime();
-      let stillEmployed = (!hasEndDate || endDate.getTime() > date.getTime());
-
-      return started && stillEmployed;
-    },
-    image: () => { return image; }
-  };
-};
-
 let employees = {};
 
 function createMonthMap(fromDate, toDate) {
-  console.log(fromDate, toDate);
   let result = new Map();
   let currentDate = fromDate;
   let i = 1;

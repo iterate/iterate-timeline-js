@@ -5,7 +5,8 @@ const employee = (employeeJson) => {
   const startDate = new Date(employeeJson.startDate);
   const hasEndDate = employeeJson.endDate !== '';
   const endDate = new Date(employeeJson.endDate);
-  
+  const image = employeeJson.image;
+
   return {
     name: () => { return name; },
     startDate: () => { return startDate; },
@@ -16,7 +17,8 @@ const employee = (employeeJson) => {
       let stillEmployed = (!hasEndDate || endDate.getTime() > date.getTime());
 
       return started && stillEmployed;
-    }
+    },
+    image: () => { return image; }
   };
 };
 
