@@ -1,7 +1,7 @@
 'use strict';
 
-var $ = require('jquery');
-var employee = require('./employee').employee;
+let $ = require('jquery');
+let employee = require('./employee').employee;
 
 let statsTemplate = require('./template/stats.hbs');
 let employeeImagesTemplate = require('./template/employee-images.hbs');

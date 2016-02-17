@@ -1,27 +1,29 @@
+'use strict';
+
 // Gulp Dependencies
-var gulp = require('gulp');
-var rename = require('gulp-rename');
+let gulp = require('gulp');
+let rename = require('gulp-rename');
 
 // Build Dependencies
-var browserify = require('gulp-browserify');
-var uglify = require('gulp-uglify');
-var hbsfy = require('hbsfy').configure({
+let browserify = require('gulp-browserify');
+let uglify = require('gulp-uglify');
+let hbsfy = require('hbsfy').configure({
   extensions: ['html', 'hbs']
 });
 
 // Style Dependencies
-var less = require('gulp-less');
-var prefix = require('gulp-autoprefixer');
-var minifyCSS = require('gulp-minify-css');
+let less = require('gulp-less');
+let prefix = require('gulp-autoprefixer');
+let minifyCSS = require('gulp-minify-css');
 
 // Development Dependencies
-var jshint = require('gulp-jshint');
+let jshint = require('gulp-jshint');
 
 // Test Dependencies
-var mochaPhantomjs = require('gulp-mocha-phantomjs');
+let mochaPhantomjs = require('gulp-mocha-phantomjs');
 
 // development server
-var connect = require('gulp-connect');
+let connect = require('gulp-connect');
 
 gulp.task('lint-client', function() {
   return gulp.src('./client/**/*.js')
