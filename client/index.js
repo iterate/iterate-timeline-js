@@ -52,17 +52,10 @@ function createMonthMap(fromDate, toDate) {
 let months = createMonthMap(new Date(2007,2), new Date(2016,1));
 
 function displayEmployees(data) {
-  var items = [];
   let images = [];
   data.forEach(function(employee) {
-    items.push('<li>' + employee.name() + '</li>');
     images.push('<img src="/' + employee.image() + '" alt="' + employee.name() + '" width="100px">');
   });
-  var employeesList = $('<ul/>', {
-    'class': 'employees-list',
-    html: items.join('')
-  });
-  $('.employees-list').replaceWith(employeesList);
   let employeeImages = $('<div/>', {
     'id': 'employee-images',
     'class': 'item maincontent',
