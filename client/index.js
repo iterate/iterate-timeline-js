@@ -24,7 +24,7 @@ function createMonthMap(fromDate, toDate) {
   return result;
 }
 
-let months = createMonthMap(new Date(2007,2), new Date(2016,1));
+let months = createMonthMap(new Date(2007,2), new Date());
 
 function displayEmployees(data) {
   let images = data.map(function(v) {
