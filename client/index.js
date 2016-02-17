@@ -4,6 +4,7 @@ var $ = require('jquery');
 // var employee = require('employee');
 
 let statsTemplate = require('./template/stats.hbs');
+let employeeImagesTemplate = require('./template/employee-images.hbs');
 
 const employee = (employeeJson) => {
   const name = employeeJson.name;
@@ -49,16 +50,14 @@ function createMonthMap(fromDate, toDate) {
 let months = createMonthMap(new Date(2007,2), new Date(2016,1));
 
 function displayEmployees(data) {
-  let images = [];
-  data.forEach(function(employee) {
-    images.push('<img src="/' + employee.image() + '" alt="' + employee.name() + '" width="100px">');
+  let images = data.map(function(v) {
+    return {
+      file: v.image(),
+      employeeName: v.name()
+    };
   });
-  let employeeImages = $('<div/>', {
-    'id': 'employee-images',
-    'class': 'item maincontent',
-    html: images.join('')
-  });
-  $('#employee-images').replaceWith(employeeImages);
+
+  $('#employee-images').replaceWith(employeeImagesTemplate({images: images}));
 }
 
 function displayMonth(month) {
