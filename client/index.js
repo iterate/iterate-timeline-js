@@ -1,6 +1,5 @@
 'use strict';
 
-let $ = require('jquery');
 let employee = require('./employee').employee;
 
 let statsTemplate = require('./template/stats.hbs');
@@ -34,7 +33,7 @@ function displayEmployees(data) {
     };
   });
 
-  $('#employee-images').replaceWith(employeeImagesTemplate({images: images}));
+  document.querySelector('#employee-images').innerHTML = employeeImagesTemplate({images: images});
 }
 
 function displayMonth(month) {
@@ -42,7 +41,7 @@ function displayMonth(month) {
 }
 
 function displayStats(data) {
-  $('#stats').replaceWith(statsTemplate({numberOfEmployees: data.length, ratio: 1, alumni: 1}));
+  document.querySelector('#stats').innerHTML = statsTemplate({numberOfEmployees: data.length, ratio: 1, alumni: 1});
 }
 
 function currentEmployees(data) {
