@@ -38,7 +38,7 @@ function displayEmployees(data) {
 }
 
 function displayMonth(month) {
-  $('#rangemonth').text(month.toDateString());
+  document.querySelector('#rangemonth').textContent = month.toDateString();
 }
 
 function displayStats(data) {
@@ -61,6 +61,10 @@ function changeMonth(month) {
   displayStats(employeesOnDate(employees, month));
 }
 
+function getChosenMonth() {
+  return months.get(parseInt(document.querySelector('#rangepicker').value));
+}
+
 function initialize() {
   fetch('/data/employees.json')
     .then(function(response) {
@@ -70,7 +74,7 @@ function initialize() {
       employees = json.map(employee);
     })
     .then(function() {
-      changeMonth(months.get(parseInt($('#rangepicker').val())));
+      changeMonth(getChosenMonth());
     })
     .catch(function(ex) {
       console.log('Failed to fetch employees.', ex);
@@ -79,13 +83,14 @@ function initialize() {
 
 initialize();
 
-$('#rangepicker').change(function() {
-  let chosenMonth = months.get(parseInt($(this).val()));
-  changeMonth(chosenMonth);
+let rangepicker = document.querySelector('#rangepicker');
+
+rangepicker.addEventListener('change', function() {
+  changeMonth(getChosenMonth());
 });
 
-$('#rangepicker').attr('max', months.size);
-$('#rangepicker').attr('value', months.size);
+rangepicker.setAttribute('max', months.size);
+rangepicker.setAttribute('value', months.size);
 
 
 module.exports.currentEmployees = currentEmployees;
