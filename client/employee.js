@@ -8,9 +8,9 @@ const employee = (employeeJson) => {
   const image = employeeJson.image;
 
   return {
-    name: () => { return name; },
-    startDate: () => { return startDate; },
-    endDate: () => { return endDate; },
+    get name () { return name; },
+    get startDate () { return startDate; },
+    get endDate () { return endDate; },
     isCurrentlyEmployed: () => { return !hasEndDate; },
     isEmployedOn: (date) => {
       let started = startDate.getTime() <= date.getTime();
@@ -18,7 +18,7 @@ const employee = (employeeJson) => {
 
       return started && stillEmployed;
     },
-    image: () => { return image; }
+    get image () { return image; }
   };
 };
 

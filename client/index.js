@@ -28,8 +28,8 @@ let months = createMonthMap(new Date(2007,2), new Date());
 function displayEmployees(data) {
   let images = data.map(function(v) {
     return {
-      file: v.image(),
-      employeeName: v.name()
+      file: v.image,
+      employeeName: v.name
     };
   });
 
