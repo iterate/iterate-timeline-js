@@ -38,7 +38,7 @@ gulp.task('lint-test', function() {
 });
 
 gulp.task('browserify-client', ['lint-client'], function() {
-  return gulp.src('client/*.js')
+  return gulp.src('client/index.js')
     .pipe(browserify({
       insertGlobals: true,
       transform: [hbsfy, 'babelify']
