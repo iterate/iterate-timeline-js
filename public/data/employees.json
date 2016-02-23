@@ -418,5 +418,11 @@
         "image": "images/du.jpg",
         "name": "Tor-Erik Steinsland",
         "startDate": "2016-02-01"
+    },
+    {
+        "endDate": "2015-04-05",
+        "image": "images/du.jpg",
+        "name": "Markus Vesøen",
+        "startDate": "2015-01-05"
     }
 ]
