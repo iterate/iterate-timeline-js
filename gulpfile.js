@@ -101,3 +101,11 @@ gulp.task('watch', function() {
 gulp.task('build', ['browserify-client', 'minify']);
 
 gulp.task('default', ['build', 'connect', 'watch']);
+
+gulp.task('serveprod', function() {
+  connect.server({
+    root: 'public',
+    port: process.env.PORT || 5000,
+    livereload: false
+  });
+});
