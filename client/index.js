@@ -23,10 +23,6 @@ function displayMonth(month) {
   document.querySelector('#rangemonth').textContent = month.toDateString();
 }
 
-function displayStats(data) {
-  document.querySelector('#stats').innerHTML = statsTemplate({numberOfEmployees: data.length, ratio: 1, alumni: 1});
-}
-
 function currentEmployees(data) {
   return data.filter(function(employee) { return employee.isCurrentlyEmployed(); });
 }
@@ -37,10 +33,16 @@ function employeesOnDate(data, date) {
   });
 }
 
+function displayStats(employees, month) {
+  let currentEmployees = employeesOnDate(employees, month);
+  let employeesUpToDate = employees.filter(function(employee) { return employee.startDate.getTime() <= month.getTime(); });
+  document.querySelector('#stats').innerHTML = statsTemplate({numberOfEmployees: currentEmployees.length, ratio: 1, alumni: employeesUpToDate.length});
+}
+
 function changeMonth(month) {
   displayMonth(month);
   displayEmployees(employeesOnDate(employees, month));
-  displayStats(employeesOnDate(employees, month));
+  displayStats(employees, month);
 }
 
 rangepicker.initialize(new Date(2007,2), new Date(), changeMonth);
