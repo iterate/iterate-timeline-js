@@ -37,7 +37,15 @@ function employeesOnDate(data, date) {
 function displayStats(employees, month) {
   let currentEmployees = employeesOnDate(employees, month);
   let employeesUpToDate = employees.filter(function(employee) { return employee.startDate <= month; });
-  document.querySelector('#stats').innerHTML = statsTemplate({numberOfEmployees: currentEmployees.length, ratio: 1, alumni: employeesUpToDate.length});
+  let currentMales = currentEmployees.filter(function(employee) { return employee.isMale; }).length;
+  let currentFemales = currentEmployees.filter(function(employee) { return employee.isFemale; }).length;
+  let ratio = ((currentFemales / currentMales) * 100).toFixed();
+  document.querySelector('#stats').innerHTML = statsTemplate({
+    month: month.format('MMMM YYYY'),
+    numberOfEmployees: currentEmployees.length,
+    ratio: ratio,
+    alumni: employeesUpToDate.length
+  });
 }
 
 function changeMonth(month) {
