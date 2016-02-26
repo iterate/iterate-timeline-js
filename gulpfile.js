@@ -95,6 +95,7 @@ gulp.task('connect', function() {
 gulp.task('watch', function() {
   gulp.watch('client/**/*.less', ['minify']);
   gulp.watch('client/**/*.js', ['browserify-client']);
+  gulp.watch('client/template/**/*.hbs', ['browserify-client']);
   gulp.watch('test/client/**/*.js', ['test']);
 });
 
