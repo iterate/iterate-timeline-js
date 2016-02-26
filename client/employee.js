@@ -8,6 +8,7 @@ const employee = (employeeJson) => {
   const hasEndDate = employeeJson.endDate !== '';
   const endDate = moment(employeeJson.endDate);
   const image = employeeJson.image;
+  const sex = employeeJson.sex;
 
   return {
     get name () { return name; },
@@ -20,7 +21,9 @@ const employee = (employeeJson) => {
 
       return started && stillEmployed;
     },
-    get image () { return image; }
+    get image () { return image; },
+    get isMale () { return sex === 'male'; },
+    get isFemale () { return sex === 'female'; }
   };
 };
 
