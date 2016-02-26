@@ -4,15 +4,11 @@ let months = {};
 
 function createMonthMap(fromDate, toDate) {
   let result = new Map();
-  let currentDate = new Date(Date.UTC(fromDate.getFullYear(), fromDate.getMonth(), fromDate.getDate(), 0, 0, 0));
+  let currentDate = fromDate;
   let i = 1;
   while (currentDate < toDate) {
-    result.set(i++, currentDate);
-    let currentMonth = currentDate.getMonth();
-    let currentYear = currentDate.getYear();
-    let newMonth = currentMonth === 11 ? 0 : currentMonth + 1;
-    let newYear = currentMonth === 11 ? currentYear + 1 : currentYear;
-    currentDate = new Date(Date.UTC(1900 + newYear, newMonth, 1, 0, 0, 0));
+    result.set(i++, currentDate.clone());
+    currentDate = currentDate.add(1, 'months');
   }
 
   return result;

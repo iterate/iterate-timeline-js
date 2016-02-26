@@ -1,13 +1,12 @@
 'use strict';
 
+let moment = require('moment');
+
 const employee = (employeeJson) => {
-  function createDateAsUTC(date) {
-    return new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate(), 0, 0, 0));
-  }
   const name = employeeJson.name;
-  const startDate = createDateAsUTC(new Date(employeeJson.startDate));
+  const startDate = moment(employeeJson.startDate);
   const hasEndDate = employeeJson.endDate !== '';
-  const endDate = createDateAsUTC(new Date(employeeJson.endDate));
+  const endDate = moment(employeeJson.endDate);
   const image = employeeJson.image;
 
   return {
@@ -17,7 +16,7 @@ const employee = (employeeJson) => {
     isCurrentlyEmployed: () => { return !hasEndDate; },
     isEmployedOn: (date) => {
       let started = startDate <= date;
-      let stillEmployed = (!hasEndDate || endDate.getTime() > date.getTime());
+      let stillEmployed = (!hasEndDate || endDate > date);
 
       return started && stillEmployed;
     },

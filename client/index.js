@@ -2,6 +2,7 @@
 
 let employee = require('./employee').employee;
 let rangepicker = require('./rangepicker');
+let moment = require('moment');
 
 let statsTemplate = require('./template/stats.hbs');
 let employeeImagesTemplate = require('./template/employee-images.hbs');
@@ -20,7 +21,7 @@ function displayEmployees(data) {
 }
 
 function displayMonth(month) {
-  document.querySelector('#rangemonth').textContent = month.toDateString();
+  document.querySelector('#rangemonth').textContent = month.format('MMMM YYYY');
 }
 
 function currentEmployees(data) {
@@ -35,7 +36,7 @@ function employeesOnDate(data, date) {
 
 function displayStats(employees, month) {
   let currentEmployees = employeesOnDate(employees, month);
-  let employeesUpToDate = employees.filter(function(employee) { return employee.startDate.getTime() <= month.getTime(); });
+  let employeesUpToDate = employees.filter(function(employee) { return employee.startDate <= month; });
   document.querySelector('#stats').innerHTML = statsTemplate({numberOfEmployees: currentEmployees.length, ratio: 1, alumni: employeesUpToDate.length});
 }
 
@@ -45,7 +46,7 @@ function changeMonth(month) {
   displayStats(employees, month);
 }
 
-rangepicker.initialize(new Date(2007,2), new Date(), changeMonth);
+rangepicker.initialize(moment('2007-03-01'), moment(), changeMonth);
 
 function initialize() {
   fetch('/data/employees.json')
