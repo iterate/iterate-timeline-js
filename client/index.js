@@ -7,10 +7,10 @@ let moment = require('moment');
 let statsTemplate = require('./template/stats.hbs');
 let employeeImagesTemplate = require('./template/employee-images.hbs');
 
-let employees = [];
+let allEmployees = [];
 
-function displayEmployees(data) {
-  let images = data.map(function(v) {
+function displayEmployees(employees) {
+  let images = employees.map(function(v) {
     return {
       file: v.image,
       employeeName: v.name
@@ -24,12 +24,8 @@ function displayMonth(month) {
   document.querySelector('#rangemonth').textContent = month.format('MMMM YYYY');
 }
 
-function currentEmployees(data) {
-  return data.filter(function(employee) { return employee.isCurrentlyEmployed(); });
-}
-
-function employeesOnDate(data, date) {
-  return data.filter(function(employee) {
+function employeesOnDate(employees, date) {
+  return employees.filter(function(employee) {
     return employee.isEmployedOn(date);
   });
 }
@@ -40,6 +36,7 @@ function displayStats(employees, month) {
   let currentMales = currentEmployees.filter(function(employee) { return employee.isMale; }).length;
   let currentFemales = currentEmployees.filter(function(employee) { return employee.isFemale; }).length;
   let ratio = ((currentFemales / currentMales) * 100).toFixed();
+
   document.querySelector('#stats').innerHTML = statsTemplate({
     month: month.format('MMMM YYYY'),
     numberOfEmployees: currentEmployees.length,
@@ -50,8 +47,8 @@ function displayStats(employees, month) {
 
 function changeMonth(month) {
   displayMonth(month);
-  displayEmployees(employeesOnDate(employees, month));
-  displayStats(employees, month);
+  displayEmployees(employeesOnDate(allEmployees, month));
+  displayStats(allEmployees, month);
 }
 
 rangepicker.initialize(moment('2007-03-01'), moment(), changeMonth);
@@ -62,7 +59,7 @@ function initialize() {
       return response.json();
     })
     .then(function(json) {
-      employees = json.map(employee);
+      allEmployees = json.map(employee);
     })
     .then(function() {
       changeMonth(rangepicker.getChosenMonth());
@@ -73,7 +70,3 @@ function initialize() {
 }
 
 initialize();
-
-module.exports.currentEmployees = currentEmployees;
-module.exports.employeesOnDate = employeesOnDate;
-
