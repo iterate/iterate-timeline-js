@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iterate timeline</title>
-    <link rel="stylesheet" href="stylesheets/iterate-timeline.css">
+    <link rel="stylesheet" href="stylesheets/iterate-timeline.min.css">
+    <link rel="stylesheet" href="stylesheets/nv.d3.min.css">
     <script src="javascripts/iterate-timeline.js" defer="true"></script>
   </head>
   <body>
@@ -15,8 +16,10 @@
 
     <div class="container">
       <div class="item maincontent" id="employee-images"></div>
-      <div class="item aside" id="stats">
-      </div>
+      <div class="item aside" id="stats"></div>
+    </div>
+    <div id="employee-chart">
+      <svg style="height: 500px; width: 100%;"></svg>
     </div>
   </body>
 </html>

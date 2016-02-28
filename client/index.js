@@ -3,6 +3,7 @@
 let employee = require('./employee').employee;
 let rangepicker = require('./rangepicker');
 let moment = require('moment');
+let chart = require('./chart');
 
 let statsTemplate = require('./template/stats.hbs');
 let employeeImagesTemplate = require('./template/employee-images.hbs');
@@ -63,6 +64,7 @@ function initialize() {
     })
     .then(function() {
       changeMonth(rangepicker.getChosenMonth());
+      chart.drawGraph(moment('2007-03-01'), moment(), allEmployees);
     })
     .catch(function(ex) {
       console.log('Failed to fetch employees.', ex);

@@ -79,6 +79,11 @@ gulp.task('minify', ['styles'], function() {
     .pipe(gulp.dest('public/stylesheets'));
 });
 
+gulp.task('copycss', function() {
+  return gulp.src('node_modules/nvd3/build/nv.d3.min.css')
+    .pipe(gulp.dest('public/stylesheets'));
+});
+
 gulp.task('uglify', ['browserify-client'], function() {
   return gulp.src('build/iterate-timeline.js')
     .pipe(uglify())
@@ -99,7 +104,7 @@ gulp.task('watch', function() {
   gulp.watch('test/client/**/*.js', ['test']);
 });
 
-gulp.task('build', ['browserify-client', 'minify']);
+gulp.task('build', ['browserify-client', 'minify', 'copycss']);
 
 gulp.task('default', ['build', 'connect', 'watch']);
 
