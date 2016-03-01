@@ -2,6 +2,7 @@
 
 let nv = require('nvd3');
 let d3 = require('d3');
+let moment = require('moment');
 
 function createMonthArray(fromDate, toDate) {
   let data = [];
@@ -11,11 +12,10 @@ function createMonthArray(fromDate, toDate) {
     currentDate = currentDate.add(1, 'months');
   }
 
-  console.log(data);
   return data;
 }
 
-function drawGraph(fromDate, toDate, employees) {
+function drawGraph(fromDate, toDate, employees, updateFunction) {
   nv.addGraph(function() {
     let chart = nv.models.lineChart()
       .margin({left: 100})  //Adjust chart margins to give the x-axis some breathing room.
@@ -25,6 +25,7 @@ function drawGraph(fromDate, toDate, employees) {
       .showYAxis(true)        //Show the y-axis
       .showXAxis(true)        //Show the x-axis
     ;
+    chart.lines.dispatch.on('elementClick', function(data) { updateFunction(moment(data[0].point.x)); });
 
     chart.xAxis
       .axisLabel('Tid');

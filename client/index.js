@@ -64,7 +64,7 @@ function initialize() {
     })
     .then(function() {
       changeMonth(rangepicker.getChosenMonth());
-      chart.drawGraph(moment('2007-03-01'), moment(), allEmployees);
+      chart.drawGraph(moment('2007-03-01'), moment(), allEmployees, changeMonth);
     })
     .catch(function(ex) {
       console.log('Failed to fetch employees.', ex);
