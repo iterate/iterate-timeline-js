@@ -11,6 +11,9 @@
   </head>
   <body>
     <h1>Iterate timeline</h1>
+    <div>
+      <p>Klikk på grafen for å se hvem som var ansatt i den aktuelle perioden.
+    </div>
     <div id="employee-chart">
       <svg style="height: 500px; width: 100%;"></svg>
     </div>
@@ -19,7 +22,10 @@
       <div class="item maincontent" id="employee-images"></div>
       <div class="item aside" id="stats"></div>
     </div>
-    <input id="rangepicker" type="range" min="1" step="1" value="1" name="month">
-    <span id="rangemonth"></span>
+    <div>
+      <p>Du kan også bruke denne inputen til å endre hva for dato du vil se på. Bruk for eksempel piltastene for å spole fram / tilbake.</p>
+      <input id="rangepicker" type="range" min="1" step="1" value="1" name="month">
+      <span id="rangemonth"></span>
+    </div>
   </body>
 </html>
