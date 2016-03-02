@@ -28,7 +28,10 @@ function drawGraph(fromDate, toDate, employees, updateFunction) {
     chart.lines.dispatch.on('elementClick', function(data) { updateFunction(moment(data[0].point.x)); });
 
     chart.xAxis
-      .axisLabel('Tid');
+      .axisLabel('Tid')
+      .tickFormat(function(d) { return d3.time.format('%b\'%y')(new Date(d)); });
+
+    chart.xScale(d3.time.scale());
 
     chart.yAxis
       .axisLabel('Antall ansatte');
