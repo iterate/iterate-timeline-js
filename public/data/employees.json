@@ -1,499 +1,650 @@
 [
     {
         "endDate": "2015-10-05",
+        "id": 1,
         "image": "images/jorgensen.jpg",
         "name": "Simen Fure Jørgensen",
-        "startDate": "2007-03-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2007-03-01"
     },
     {
         "endDate": "",
+        "id": 2,
         "image": "images/haugeto.jpg",
         "name": "Anders Haugeto",
-        "startDate": "2007-03-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2007-03-01"
     },
     {
         "endDate": "",
+        "id": 3,
         "image": "images/kim.jpg",
         "name": "Kim Ophus Leskovsky",
-        "startDate": "2007-03-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2007-03-01"
     },
     {
         "endDate": "",
+        "id": 4,
         "image": "images/stein.jpg",
         "name": "Stein Kvarud",
-        "startDate": "2007-05-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2007-05-01"
     },
     {
         "endDate": "2010-11-01",
+        "id": 5,
         "image": "images/du.jpg",
         "name": "Kjell Arne Arvesen",
-        "startDate": "2007-08-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2007-08-01"
     },
     {
         "endDate": "2008-02-01",
+        "id": 6,
         "image": "images/du.jpg",
         "name": "Torbjörn Josefsson",
-        "startDate": "2007-08-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2007-08-01"
     },
     {
         "endDate": "",
+        "id": 7,
         "image": "images/morten.jpg",
         "name": "Morten Slaatten Berg",
-        "startDate": "2007-09-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2007-09-01"
     },
     {
         "endDate": "",
+        "id": 8,
         "image": "images/wien.jpg",
         "name": "Mari Wien",
-        "startDate": "2007-09-01",
-        "sex": "female"
+        "sex": "female",
+        "startDate": "2007-09-01"
     },
     {
         "endDate": "",
+        "id": 9,
         "image": "images/rune.jpg",
         "name": "Rune Larsen",
-        "startDate": "2007-09-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2007-09-01"
     },
     {
         "endDate": "2013-05-01",
+        "id": 10,
         "image": "images/anne.jpg",
         "name": "Anne Vold Torland",
-        "startDate": "2007-10-01",
-        "sex": "female"
+        "sex": "female",
+        "startDate": "2007-10-01"
     },
     {
         "endDate": "2012-08-01",
+        "id": 11,
         "image": "images/du.jpg",
         "name": "Torvald Bringsvor",
-        "startDate": "2007-12-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2007-12-01"
     },
     {
         "endDate": "2009-10-01",
+        "id": 12,
         "image": "images/du.jpg",
         "name": "Dan Vigeland",
-        "startDate": "2008-01-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2008-01-01"
     },
     {
         "endDate": "",
+        "id": 13,
         "image": "images/du.jpg",
         "name": "Bartlomiej Furman",
-        "startDate": "2008-01-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2008-01-01"
     },
     {
         "endDate": "",
+        "id": 14,
         "image": "images/singh.jpg",
         "name": "Rana Singh",
-        "startDate": "2008-04-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2008-04-01"
     },
     {
         "endDate": "2009-06-01",
+        "id": 15,
         "image": "images/du.jpg",
         "name": "Jørgen Lind",
-        "startDate": "2008-05-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2008-05-01"
     },
     {
         "endDate": "2011-01-01",
+        "id": 16,
         "image": "images/du.jpg",
         "name": "Krzysztof Dziadek",
-        "startDate": "2008-05-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2008-05-01"
     },
     {
         "endDate": "",
+        "id": 17,
         "image": "images/stigberg.jpg",
         "name": "Stig Bergestad",
-        "startDate": "2008-08-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2008-08-01"
     },
     {
         "endDate": "2009-03-01",
+        "id": 18,
         "image": "images/du.jpg",
         "name": "André",
-        "startDate": "2008-08-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2008-08-01"
     },
     {
         "endDate": "2011-12-01",
+        "id": 19,
         "image": "images/du.jpg",
         "name": "Lars Aune",
-        "startDate": "2008-08-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2008-08-01"
     },
     {
         "endDate": "",
+        "id": 20,
         "image": "images/nina.jpg",
         "name": "Nina Hanssen",
-        "startDate": "2008-09-01",
-        "sex": "female"
+        "sex": "female",
+        "startDate": "2008-09-01"
     },
     {
         "endDate": "2011-12-01",
+        "id": 21,
         "image": "images/du.jpg",
         "name": "Stein Magnus Jodal",
-        "startDate": "2009-02-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2009-02-01"
     },
     {
         "endDate": "2011-05-01",
+        "id": 22,
         "image": "images/du.jpg",
         "name": "Jan Persson",
-        "startDate": "2009-03-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2009-03-01"
     },
     {
         "endDate": "2013-02-01",
+        "id": 23,
         "image": "images/janeirik.jpg",
         "name": "Jan-Eirik Nævdal",
-        "startDate": "2009-03-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2009-03-01"
     },
     {
         "endDate": "",
+        "id": 24,
         "image": "images/fredrik.jpg",
         "name": "Fredrik Pettersen",
-        "startDate": "2009-05-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2009-05-01"
     },
     {
         "endDate": "2011-09-01",
+        "id": 25,
         "image": "images/du.jpg",
         "name": "Johannes Knutsen",
-        "startDate": "2009-06-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2009-06-01"
     },
     {
         "endDate": "2010-10-01",
+        "id": 26,
         "image": "images/du.jpg",
         "name": "Benedicte Raae",
-        "startDate": "2009-08-01",
-        "sex": "female"
+        "sex": "female",
+        "startDate": "2009-08-01"
     },
     {
-        "endDate": "",
+        "endDate": "2016-09-30",
+        "id": 27,
         "image": "images/ivar.jpg",
         "name": "Ivar Fredriksen",
-        "startDate": "2010-01-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2010-01-01"
     },
     {
         "endDate": "2011-01-01",
+        "id": 28,
         "image": "images/du.jpg",
         "name": "Bjørn Tennøe",
-        "startDate": "2010-09-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2010-09-01"
     },
     {
         "endDate": "2016-01-28",
+        "id": 29,
         "image": "images/bang.jpg",
         "name": "Tom Johannes Bang",
-        "startDate": "2010-10-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2010-10-01"
     },
     {
         "endDate": "2015-01-01",
+        "id": 30,
         "image": "images/kent.jpg",
         "name": "Kent Beck",
-        "startDate": "2010-10-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2010-10-01"
     },
     {
         "endDate": "2013-12-01",
+        "id": 31,
         "image": "images/parul.jpg",
         "name": "Parul Kukreti Chandna",
-        "startDate": "2010-11-01",
-        "sex": "female"
+        "sex": "female",
+        "startDate": "2010-11-01"
     },
     {
         "endDate": "2015-05-12",
+        "id": 32,
         "image": "images/jakub.jpg",
         "name": "Jakub Holy",
-        "startDate": "2011-01-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2011-01-01"
     },
     {
         "endDate": "2012-05-01",
+        "id": 33,
         "image": "images/du.jpg",
         "name": "Aaron Sevivas",
-        "startDate": "2011-02-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2011-02-01"
     },
     {
         "endDate": "2013-01-01",
+        "id": 34,
         "image": "images/du.jpg",
         "name": "Krzysztof Grodzicki",
-        "startDate": "2011-04-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2011-04-01"
     },
     {
         "endDate": "2012-02-01",
+        "id": 35,
         "image": "images/du.jpg",
         "name": "Ingrid Wigum Gjersvold",
-        "startDate": "2011-04-01",
-        "sex": "female"
+        "sex": "female",
+        "startDate": "2011-04-01"
     },
     {
         "endDate": "",
+        "id": 36,
         "image": "images/mortjohn.jpg",
         "name": "Morten Weel Johnsen",
-        "startDate": "2011-08-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2011-08-01"
     },
     {
-        "endDate": "",
+        "endDate": "2016-06-30",
+        "id": 37,
         "image": "images/klette.jpg",
         "name": "Kristian Klette",
-        "startDate": "2011-08-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2011-08-01"
     },
     {
-        "endDate": "",
+        "endDate": "2016-08-31",
+        "id": 38,
         "image": "images/palru.jpg",
         "name": "Pål Ruud",
-        "startDate": "2011-08-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2011-08-01"
     },
     {
         "endDate": "",
+        "id": 39,
         "image": "images/susannmo.jpg",
         "name": "Susanne Moseby",
-        "startDate": "2011-10-01",
-        "sex": "female"
+        "sex": "female",
+        "startDate": "2011-10-01"
     },
     {
         "endDate": "",
+        "id": 40,
         "image": "images/eide.jpg",
         "name": "Magnus Eide",
-        "startDate": "2012-08-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2012-08-01"
     },
     {
         "endDate": "",
+        "id": 41,
         "image": "images/barlindhaug.jpg",
         "name": "Lars Barlindhaug",
-        "startDate": "2012-08-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2012-08-01"
     },
     {
         "endDate": "2014-12-01",
+        "id": 42,
         "image": "images/jakob.jpg",
         "name": "Jakob Lind",
-        "startDate": "2012-09-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2012-09-01"
     },
     {
         "endDate": "",
+        "id": 43,
         "image": "images/torve.jpg",
         "name": "Torve Indahl",
-        "startDate": "2012-11-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2012-11-01"
     },
     {
         "endDate": "",
+        "id": 44,
         "image": "images/rita.jpg",
         "name": "Rita Jonyer",
-        "startDate": "2013-01-01",
-        "sex": "female"
+        "sex": "female",
+        "startDate": "2013-01-01"
     },
     {
         "endDate": "2016-01-29",
+        "id": 45,
         "image": "images/andrew.jpg",
         "name": "Andrew Paul Swift",
-        "startDate": "2013-04-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2013-04-01"
     },
     {
         "endDate": "",
+        "id": 46,
         "image": "images/dag.jpg",
         "name": "Dag Corell",
-        "startDate": "2013-04-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2013-04-01"
     },
     {
         "endDate": "2014-06-01",
+        "id": 47,
         "image": "images/yilmaz.jpg",
         "name": "Yilmaz Guleryuz",
-        "startDate": "2013-04-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2013-04-01"
     },
     {
         "endDate": "2014-09-01",
+        "id": 48,
         "image": "images/tord.jpg",
         "name": "Tord Heyerdahl",
-        "startDate": "2013-06-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2013-06-01"
     },
     {
         "endDate": "",
+        "id": 49,
         "image": "images/sigve.jpg",
         "name": "Sigve Barstad",
-        "startDate": "2013-06-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2013-06-01"
     },
     {
         "endDate": "",
+        "id": 50,
         "image": "images/ole.jpg",
         "name": "Ole Schilling Tjensvold",
-        "startDate": "2013-07-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2013-07-01"
     },
     {
         "endDate": "",
+        "id": 51,
         "image": "images/martin.jpg",
         "name": "Martin Akre Midtsund",
-        "startDate": "2013-07-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2013-07-01"
     },
     {
-        "endDate": "",
+        "endDate": "2016-05-31",
+        "id": 52,
         "image": "images/iselin.jpg",
         "name": "Iselin Kornli",
-        "startDate": "2013-08-01",
-        "sex": "female"
+        "sex": "female",
+        "startDate": "2013-08-01"
     },
     {
         "endDate": "",
+        "id": 53,
         "image": "images/osmund.jpg",
         "name": "Osmund Maheswaran",
-        "startDate": "2013-08-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2013-08-01"
     },
     {
         "endDate": "",
+        "id": 54,
         "image": "images/viktor.jpg",
         "name": "Viktor Varland",
-        "startDate": "2013-08-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2013-08-01"
     },
     {
-        "endDate": "",
+        "endDate": "2016-08-31",
+        "id": 55,
         "image": "images/fredrikv.jpg",
         "name": "Fredrik Vraalsen",
-        "startDate": "2013-09-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2013-09-01"
     },
     {
         "endDate": "",
+        "id": 56,
         "image": "images/oddmund.jpg",
         "name": "Oddmund Strømme",
-        "startDate": "2013-10-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2013-10-01"
     },
     {
         "endDate": "",
+        "id": 57,
         "image": "images/brynjar.jpg",
         "name": "Brynjar Rognved",
-        "startDate": "2014-08-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2014-08-01"
     },
     {
         "endDate": "",
+        "id": 58,
         "image": "images/Henrik.jpg",
         "name": "Henrik Glasø Skifjeld",
-        "startDate": "2014-08-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2014-08-01"
     },
     {
         "endDate": "",
+        "id": 59,
         "image": "images/jorgen.jpg",
         "name": "Jørgen Aaberg",
-        "startDate": "2014-08-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2014-08-01"
     },
     {
         "endDate": "",
+        "id": 60,
         "image": "images/magnusDaehlen.jpg",
         "name": "Magnús Dæhlen",
-        "startDate": "2014-08-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2014-08-01"
     },
     {
         "endDate": "",
+        "id": 61,
         "image": "images/truls.jpg",
         "name": "Truls Skeie",
-        "startDate": "2014-08-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2014-08-01"
     },
     {
         "endDate": "2016-01-31",
+        "id": 62,
         "image": "images/alex.jpg",
         "name": "Alexandra Leisse",
-        "startDate": "2014-09-01",
-        "sex": "female"
+        "sex": "female",
+        "startDate": "2014-09-01"
     },
     {
-        "endDate": "",
+        "endDate": "2016-09-30",
+        "id": 63,
         "image": "images/erik.jpg",
         "name": "Erik Assum",
-        "startDate": "2014-10-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2014-10-01"
     },
     {
         "endDate": "",
+        "id": 64,
         "image": "images/charles.jpg",
         "name": "Charles Michelson",
-        "startDate": "2015-01-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2015-01-01"
     },
     {
-        "endDate": "",
+        "endDate": "2016-06-30",
+        "id": 65,
         "image": "images/therese.jpg",
         "name": "Therese Engen",
-        "startDate": "2015-04-01",
-        "sex": "female"
+        "sex": "female",
+        "startDate": "2015-04-01"
     },
     {
         "endDate": "",
+        "id": 66,
         "image": "images/arne.jpg",
         "name": "Arne Mæhlum",
-        "startDate": "2015-08-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2015-08-01"
     },
     {
         "endDate": "",
+        "id": 67,
         "image": "images/karine.jpg",
         "name": "Karine Gran Vifstad",
-        "startDate": "2015-08-01",
-        "sex": "female"
+        "sex": "female",
+        "startDate": "2015-08-01"
     },
     {
         "endDate": "",
+        "id": 68,
         "image": "images/magnusl.jpg",
         "name": "Magnus Lien",
-        "startDate": "2015-08-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2015-08-01"
     },
     {
         "endDate": "",
+        "id": 69,
         "image": "images/sindre.jpg",
         "name": "Sindre Johansen",
-        "startDate": "2015-08-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2015-08-01"
     },
     {
         "endDate": "",
-        "image": "images/du.jpg",
+        "id": 70,
+        "image": "images/torerik.jpg",
         "name": "Tor-Erik Steinsland",
-        "startDate": "2016-02-01",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2016-02-01"
     },
     {
         "endDate": "2015-04-05",
+        "id": 71,
         "image": "images/du.jpg",
         "name": "Markus Vesøen",
-        "startDate": "2015-01-05",
-        "sex": "male"
+        "sex": "male",
+        "startDate": "2015-01-05"
+    },
+    {
+        "endDate": "",
+        "id": 72,
+        "image": "images/pia.jpg",
+        "name": "Pia Lindkjølen",
+        "sex": "female",
+        "startDate": "2016-06-01"
+    },
+    {
+        "endDate": "",
+        "id": 73,
+        "image": "images/kjetil.jpg",
+        "name": "Kjetil Sletten",
+        "sex": "male",
+        "startDate": "2016-08-01"
+    },
+    {
+        "endDate": "",
+        "id": 74,
+        "image": "images/pernille.jpg",
+        "name": "Pernille Wangsholm",
+        "sex": "female",
+        "startDate": "2016-08-01"
+    },
+    {
+        "endDate": "",
+        "id": 75,
+        "image": "images/nils.jpg",
+        "name": "Nils Rugsveen",
+        "sex": "male",
+        "startDate": "2016-08-01"
+    },
+    {
+        "endDate": "",
+        "id": 76,
+        "image": "images/jonas.jpg",
+        "name": "Jonas Feiring",
+        "sex": "male",
+        "startDate": "2016-01-01"
+    },
+    {
+        "endDate": "",
+        "id": 77,
+        "image": "images/patrick.jpg",
+        "name": "Patrick Skevik",
+        "sex": "male",
+        "startDate": "2016-02-01"
+    },
+    {
+        "endDate": "",
+        "id": 78,
+        "image": "images/du.jpg",
+        "name": "Martine Bongard",
+        "sex": "female",
+        "startDate": "2016-08-01"
+    },
+    {
+        "endDate": "",
+        "id": 79,
+        "image": "images/bendik.jpg",
+        "name": "Bendik Skotland Hansen",
+        "sex": "male",
+        "startDate": "2016-08-01"
+    },
+    {
+        "endDate": "",
+        "id": 80,
+        "image": "images/andreas.jpg",
+        "name": "Andreas Nordahl",
+        "sex": "male",
+        "startDate": "2016-08-01"
+    },
+    {
+        "endDate": "",
+        "id": 81,
+        "image": "images/alexander.jpg",
+        "name": "Alexander Bull",
+        "sex": "male",
+        "startDate": "2016-08-01"
     }
 ]
