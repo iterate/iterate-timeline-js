@@ -3,12 +3,12 @@
 let moment = require('moment');
 
 const employee = (employeeJson) => {
-  const name = employeeJson.name;
+  const name = employeeJson.firstName + ' ' + employeeJson.lastName;
   const startDate = moment(employeeJson.startDate);
   const hasEndDate = employeeJson.endDate !== '';
   const endDate = moment(employeeJson.endDate);
-  const image = employeeJson.image;
-  const sex = employeeJson.sex;
+  const image = employeeJson.imageUrl;
+  const sex = employeeJson.gender;
 
   return {
     get name () { return name; },
