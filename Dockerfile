@@ -4,11 +4,10 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 ENV NODE_ENV production
-COPY package.json /usr/src/app
-COPY gulpfile.js /usr/src/app
+COPY ["package.json","gulpfile.js","jshint.rc","/usr/src/app/"]
+COPY "server" "/usr/src/app/server/"
 RUN npm install && npm cache clean
 RUN node node_modules/gulp/bin/gulp build
-COPY . /usr/src/app
 
 EXPOSE 5000
 
