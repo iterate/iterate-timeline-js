@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "start": "nodemon ./server/index.js"
   },
   "author": "Morten Slaatten Berg",
   "dependencies": {
@@ -19,7 +20,10 @@
     "browserify-shim": "^3.8.12",
     "chai": "^3.5.0",
     "concat": "^1.0.0",
+    "cors": "^2.8.4",
     "d3": "^3.5.16",
+    "express": "^4.15.4",
+    "express-basic-auth": "^1.1.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-babel": "^6.1.2",
@@ -38,7 +42,10 @@
     "jshint": "^2.9.1",
     "mocha": "^2.4.5",
     "moment": "^2.11.2",
+    "node-fetch": "^1.7.2",
     "nvd3": "^1.8.2",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
     "whatwg-fetch": "^0.11.0"
   },
   "browserify": {
@@ -58,5 +65,8 @@
       ],
       "exports": "nv"
     }
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }

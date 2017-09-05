@@ -6,3 +6,8 @@ public/javascripts/iterate-timeline.min.js
 public/javascripts/iterate-timeline.js
 build/
 *.swp
+server/public/stylesheets/iterate-timeline.min.css
+server/public/stylesheets/iterate-timeline.css
+server/public/javascripts/iterate-timeline.min.js
+server/public/javascripts/iterate-timeline.js
+server/public/index.html

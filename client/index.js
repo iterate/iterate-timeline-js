@@ -4,16 +4,11 @@ let employee = require('./employee').employee;
 let rangepicker = require('./rangepicker');
 let moment = require('moment');
 let chart = require('./chart');
-let base64 = require('base-64');
 
 let statsTemplate = require('./template/stats.hbs');
 let employeeImagesTemplate = require('./template/employee-images.hbs');
 
 let allEmployees = [];
-
-// replace these with username/password
-const username = '';
-const password = '';
 
 function displayEmployees(employees) {
   let images = employees.map(function(v) {
@@ -60,11 +55,7 @@ function changeMonth(month) {
 rangepicker.initialize(moment('2007-03-01'), moment(), changeMonth);
 
 function initialize() {
-  fetch('https://ansatt.app.iterate.no/api/people/full', {
-    headers: {
-      'Authorization': 'Basic ' + base64.encode(username + ':' + password)
-    }
-  })
+  fetch('/data')
     .then(function(response) {
       return response.json();
     })
