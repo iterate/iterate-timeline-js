@@ -31,6 +31,10 @@ app.use(require('./lib/oauth2').router);
 app.use('/app', oauth2.authRequired);
 app.use('/app', express.static(__dirname + '/public'));
 
+app.get('/', (req, res) => {
+  res.redirect('/app');
+});
+
 app.get('/data', (req, res) => {
   fetch('https://ansatt.app.iterate.no/api/people/full', {
     headers: {
