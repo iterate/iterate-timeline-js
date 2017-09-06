@@ -28,8 +28,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(require('./lib/oauth2').router);
 
-app.use('/', oauth2.authRequired);
-app.use('/', express.static(__dirname + '/public'));
+app.use('/app', oauth2.authRequired);
+app.use('/app', express.static(__dirname + '/public'));
 
 app.get('/data', (req, res) => {
   fetch('https://ansatt.app.iterate.no/api/people/full', {
