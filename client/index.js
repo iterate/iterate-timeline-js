@@ -36,7 +36,7 @@ function displayStats(employees, month) {
   let employeesUpToDate = employees.filter(function(employee) { return employee.startDate <= month; });
   let currentMales = currentEmployees.filter(function(employee) { return employee.isMale; }).length;
   let currentFemales = currentEmployees.filter(function(employee) { return employee.isFemale; }).length;
-  let ratio = ((currentFemales / currentMales) * 100).toFixed();
+  let ratio = ((currentFemales / (currentMales + currentFemales)) * 100).toFixed();
 
   document.querySelector('#stats').innerHTML = statsTemplate({
     month: month.format('MMMM YYYY'),
